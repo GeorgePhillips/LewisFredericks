@@ -1,0 +1,11 @@
+---
+layout: homepage
+title: "Lewis Fredericks - Handcrafted Horn Eyewear"
+---
+<div>
+    {% for frame in site.frames %}
+        {% for variant in frame.variants %}
+            <h2>{{ frame.title }} | {{ variant.title }}</h2>
+        {% endfor %}
+    {% endfor %}
+</div>
