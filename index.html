@@ -5,7 +5,10 @@ title: "Lewis Fredericks - Handcrafted Horn Eyewear"
 <div>
     {% for frame in site.frames %}
         {% for variant in frame.variants %}
-            <h2>{{ frame.title }} | {{ variant.title }}</h2>
+            <h2>{{ frame.title }}</h2>
+            <h4>{{ variant.title }} | {{ variant.lens }}</h4>
+            <p>{{ frame.description }}</p>
+            <p>{{ variant.description}}</p>
         {% endfor %}
     {% endfor %}
 </div>
