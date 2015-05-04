@@ -2,6 +2,5 @@ title: Lewis Fredericks - Handcrafted Horn Eyewear
 author: Finn Lawrence
 description: Site description TODO
 baseurl: ""
-
 collections:
-  - frames
+  frames: {}
