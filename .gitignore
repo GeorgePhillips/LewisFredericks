@@ -17,6 +17,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Jekyll generated
+_site/
+
 # =========================
 # Operating System Files
 # =========================
