@@ -1,38 +1,245 @@
 <!DOCTYPE html>
 <!--[if lt 9 ]><html class="unsupported" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><html lang="en"><![endif]-->
-    
-    <head>
-        <meta charset="utf-8"/>
-        <title></title>
-        <meta name="description" content=""/>
-        <link rel="canonical" href="index.html"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-        <link rel="shortcut icon" href="./img/favicon.png"/>
-    </head>
-    <body>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Lewis Fredericks - Handcrafted Horn Eyewear</title>
+    <meta name="description" content=""/>
+    <link rel="canonical" href="index.html"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link rel="shortcut icon" href="./img/favicon.png"/>
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/slick.css">
+    <link rel="stylesheet" href="/css/slick-theme.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap-hover-dropdown.min.js"></script>
+    <script src="/js/slick.min.js"></script>
+    <script src="/js/script.js"></script>
+</head>
+<body>
+    <header>
+        <nav id="main-navigation" class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Brand</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="50" data-close-others="true" role="button" aria-expanded="false">FRAMES</a>
+                            <ul class="dropdown-menu" role="menu">
+                                
+                                    <li><a href="#the-foster">THE FOSTER</a></li>
+                                
+                                    <li><a href="#the-im">THE I.M.</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li><a href="#">LOOKBOOK</a></li>
+                        <li><a href="#">HORN</a></li>
+                        <li><a href="#">STOCKISTS</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+    <main>
         <div>
+     
     
-        
-            <h2>The Foster</h2>
-            <h4>Dark Horn | Polarised Lenses</h4>
-            <p>An iconic style featuring both character and cheek. With its refined points and gentle lines the Foster makes for a subtle yet captivating frame.</p>
-            <p>Dark anthracite base featuring subtle striations of pale yellow, brown, and other warm tones.</p>
-            <img src="/img/podium-hero-foster-dark-polarised.jpg" alt="The Foster Dark Horn">
-        
-            <h2>The Foster</h2>
-            <h4>Light Horn | Polarised Lenses</h4>
-            <p>An iconic style featuring both character and cheek. With its refined points and gentle lines the Foster makes for a subtle yet captivating frame.</p>
-            <p>Distinctive but harmonious striations of pale yellow, brown, and other warm tones.</p>
-            <img src="/img/podium-hero-foster-light-polarised.jpg" alt="The Foster Light Horn">
-        
-            <h2>The Foster</h2>
-            <h4>Yellow Horn | Polarised Lenses</h4>
-            <p>An iconic style featuring both character and cheek. With its refined points and gentle lines the Foster makes for a subtle yet captivating frame.</p>
-            <p>A consistent light semi-transparent yellow with the occasional tinge of rose.</p>
-            <img src="/img/podium-hero-foster-yellow-polarised.jpg" alt="The Foster Yellow Horn">
-        
+    
+    
+    
+    <div id="the-foster" class="nav-padding"></div>
+    <div class="container-fluid frames-podium-container">
+        <div class="frames-podium">
+            <!-- PODIUM HERO -->
+            <div id="hero-for-the-foster" class="podium-hero">
+                
+                <div>
+                    <img src="/img/podium-hero-foster-dark-polarised.jpg" alt="The Foster Dark Horn">
+                    <h2>THE FOSTER</h2>
+                    <h4>DARK HORN | POLARISED LENSES</h4>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#details-modal" data-title="THE FOSTER" data-variant="DARK HORN | POLARISED LENSES" data-description="An iconic style featuring both character and cheek. With its refined points and gentle lines the Foster makes for a subtle yet captivating frame." data-vardesc="Dark anthracite base featuring subtle striations of pale yellow, brown, and other warm tones." data-width="140mm" data-height="46mm" data-imgpath="/img/podium-hero-foster-dark-polarised.jpg">DETAILS</button>
+                </div>
+                
+                <div>
+                    <img src="/img/podium-hero-foster-light-polarised.jpg" alt="The Foster Light Horn">
+                    <h2>THE FOSTER</h2>
+                    <h4>LIGHT HORN | POLARISED LENSES</h4>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#details-modal" data-title="THE FOSTER" data-variant="LIGHT HORN | POLARISED LENSES" data-description="An iconic style featuring both character and cheek. With its refined points and gentle lines the Foster makes for a subtle yet captivating frame." data-vardesc="Distinctive but harmonious striations of pale yellow, brown, and other warm tones." data-width="140mm" data-height="46mm" data-imgpath="/img/podium-hero-foster-light-polarised.jpg">DETAILS</button>
+                </div>
+                
+                <div>
+                    <img src="/img/podium-hero-foster-yellow-polarised.jpg" alt="The Foster Yellow Horn">
+                    <h2>THE FOSTER</h2>
+                    <h4>YELLOW HORN | POLARISED LENSES</h4>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#details-modal" data-title="THE FOSTER" data-variant="YELLOW HORN | POLARISED LENSES" data-description="An iconic style featuring both character and cheek. With its refined points and gentle lines the Foster makes for a subtle yet captivating frame." data-vardesc="A consistent light semi-transparent yellow with the occasional tinge of rose." data-width="140mm" data-height="46mm" data-imgpath="/img/podium-hero-foster-yellow-polarised.jpg">DETAILS</button>
+                </div>
+                
+                <div>
+                    <img src="/img/podium-hero-foster-light-optical.jpg" alt="The Foster Light Horn">
+                    <h2>THE FOSTER</h2>
+                    <h4>LIGHT HORN | PRESCRIPTION LENSES</h4>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#details-modal" data-title="THE FOSTER" data-variant="LIGHT HORN | PRESCRIPTION LENSES" data-description="An iconic style featuring both character and cheek. With its refined points and gentle lines the Foster makes for a subtle yet captivating frame." data-vardesc="Distinctive but harmonious striations of pale yellow, brown, and other warm tones." data-width="140mm" data-height="46mm" data-imgpath="/img/podium-hero-foster-light-optical.jpg">DETAILS</button>
+                </div>
+                
+                <div>
+                    <img src="/img/podium-hero-foster-yellow-optical.jpg" alt="The Foster Yellow Horn">
+                    <h2>THE FOSTER</h2>
+                    <h4>YELLOW HORN | PRESCRIPTION LENSES</h4>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#details-modal" data-title="THE FOSTER" data-variant="YELLOW HORN | PRESCRIPTION LENSES" data-description="An iconic style featuring both character and cheek. With its refined points and gentle lines the Foster makes for a subtle yet captivating frame." data-vardesc="A consistent light semi-transparent yellow with the occasional tinge of rose." data-width="140mm" data-height="46mm" data-imgpath="/img/podium-hero-foster-yellow-optical.jpg">DETAILS</button>
+                </div>
+                
+            </div>
+            <!-- PODIUM NAV -->
+            <div id="nav-for-the-foster" class="podium-nav">
+                
+                <div class="">
+                    <img src="/img/podium-thumbnail-foster-dark-polarised.jpg" alt="The Foster Dark Horn">
+                </div>
+                
+                <div class="">
+                    <img src="/img/podium-thumbnail-foster-light-polarised.jpg" alt="The Foster Light Horn">
+                </div>
+                
+                <div class="">
+                    <img src="/img/podium-thumbnail-foster-yellow-polarised.jpg" alt="The Foster Yellow Horn">
+                </div>
+                
+                <div class="">
+                    <img src="/img/podium-thumbnail-foster-light-optical.jpg" alt="The Foster Light Horn">
+                </div>
+                
+                <div class="">
+                    <img src="/img/podium-thumbnail-foster-yellow-optical.jpg" alt="The Foster Yellow Horn">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="section-separator off-white"><div class="section-border"></div></div>
+    
+    <div id="the-im" class="nav-padding"></div>
+    <div class="container-fluid frames-podium-container">
+        <div class="frames-podium">
+            <!-- PODIUM HERO -->
+            <div id="hero-for-the-im" class="podium-hero">
+                
+                <div>
+                    <img src="/img/podium-hero-im-dark-polarised.jpg" alt="The I.M. Dark Horn">
+                    <h2>THE I.M.</h2>
+                    <h4>DARK HORN | POLARISED LENSES</h4>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#details-modal" data-title="THE I.M." data-variant="DARK HORN | POLARISED LENSES" data-description="Our approach was to keep the basic silhouette of the frame intact but slightly stretch the circle, thus giving The I. M. a little more cheek and versatility as an optical and sunglass." data-vardesc="Dark anthracite base featuring subtle striations of pale yellow, brown, and other warm tones." data-width="140mm" data-height="46mm" data-imgpath="/img/podium-hero-im-dark-polarised.jpg">DETAILS</button>
+                </div>
+                
+                <div>
+                    <img src="/img/podium-hero-im-light-polarised.jpg" alt="The I.M. Light Horn">
+                    <h2>THE I.M.</h2>
+                    <h4>LIGHT HORN | POLARISED LENSES</h4>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#details-modal" data-title="THE I.M." data-variant="LIGHT HORN | POLARISED LENSES" data-description="Our approach was to keep the basic silhouette of the frame intact but slightly stretch the circle, thus giving The I. M. a little more cheek and versatility as an optical and sunglass." data-vardesc="Distinctive but harmonious striations of pale yellow, brown, and other warm tones." data-width="140mm" data-height="46mm" data-imgpath="/img/podium-hero-im-light-polarised.jpg">DETAILS</button>
+                </div>
+                
+            </div>
+            <!-- PODIUM NAV -->
+            <div id="nav-for-the-im" class="podium-nav">
+                
+                <div class="">
+                    <img src="/img/podium-thumbnail-im-dark-polarised.jpg" alt="The I.M. Dark Horn">
+                </div>
+                
+                <div class="">
+                    <img src="/img/podium-thumbnail-im-light-polarised.jpg" alt="The I.M. Light Horn">
+                </div>
+                
+            </div>
+        </div>
+    </div>
     
 </div>
-    </body>
+
+<!-- DETAILS MODAL -->
+<div class="modal fade" id="details-modal" tabindex="-1" role="dialog" aria-labelledby="modal-frame-title" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h2 id="modal-frame-title">Frame title</h2>
+                <h4 id="modal-variant-title">Variant title</h4>
+            </div>
+            <div class="modal-body">
+                <img id="modal-variant-image" src="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send message</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- KICK OF THE SLIDERS -->
+<script>
+    
+    $('#hero-for-the-foster').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        asNavFor: '#nav-for-the-foster',
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 7000
+    });
+     $('#nav-for-the-foster').slick({
+         slidesToShow: 3,
+         slidesToScroll: 1,
+         asNavFor: '#hero-for-the-foster',
+         dots: true,
+         centerMode: true,
+         focusOnSelect: true
+     });
+     
+    $('#hero-for-the-im').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        asNavFor: '#nav-for-the-im',
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 7000
+    });
+     $('#nav-for-the-im').slick({
+         slidesToShow: 3,
+         slidesToScroll: 1,
+         asNavFor: '#hero-for-the-im',
+         dots: true,
+         centerMode: true,
+         focusOnSelect: true
+     });
+     
+</script>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
 </html>

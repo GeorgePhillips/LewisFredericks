@@ -1,0 +1,136 @@
+---
+---
+
+$light-grey: #e8e8e8;
+$dark-grey: #454545;
+$off-white: #fefefe;
+
+// GENERAL
+
+body {
+    background-color: $light-grey;
+}
+
+.off-white {
+    background-color: $off-white;
+}
+
+.section-separator {
+    height: 52px;
+}
+
+.section-border{
+    border-bottom: 2px solid $dark-grey;
+    padding-bottom: 25px;
+    margin: 0 2.5%;
+}
+
+// BUTTONS
+
+.btn-primary {
+    color: $off-white;
+    background-color: $dark-grey;
+    border-color: $dark-grey;
+}
+
+.btn-primary:active, .btn-primary:hover, .btn-primary:focus {
+    color: $dark-grey;
+    background-color: $off-white;
+    border-color: $dark-grey;
+}
+
+.btn {
+    border: 2px solid $dark-grey;
+    border-radius: 0px;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+// NAVIGATION
+
+#main-navigation {
+    background-color: $light-grey;
+    border: none;
+}
+
+#main-navigation > .container-fluid {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    border-bottom: 2px solid $dark-grey;
+}
+
+.nav-padding {
+    height: 50px;
+}
+
+// FRAMES PODIUM
+
+.frames-podium-container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.frames-podium {
+    text-align: center;
+}
+
+.podium-hero img {
+    width: 55%;
+    margin: 0 auto;
+}
+
+.podium-nav {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.podium-nav img {
+    width: 80%;
+}
+
+.slick-slide > img {
+    margin: 0 auto;
+}
+
+.slick-track {
+    margin: 0 auto;
+}
+
+.slick-prev::before, .slick-next::before {
+    color: $dark-grey;
+}
+
+// MODAL
+
+.modal-content {
+    border: 2px solid $dark-grey;
+    border-radius: 0px;
+    background-color: $light-grey;
+    text-align: center;
+}
+.modal-header {
+    padding-bottom: 0px;
+}
+
+.modal-header h2 {
+    margin-top: 10px;
+}
+
+.modal-header h4 {
+    margin-bottom: 0px;
+}
+
+.modal-body {
+    padding-top: 0px;
+}
+
+.modal-body img {
+    max-width: 100%;
+}
+
+.close span {
+    color: $dark-grey;
+}
