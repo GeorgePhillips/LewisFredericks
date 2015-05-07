@@ -7,10 +7,14 @@ $(document).ready(function() {
         var frameTitle = button.data('title');
         var variantTitle = button.data('variant');
         var imagePath = button.data('imgpath');
+        var frameDesc = button.data('description');
+        var varDesc = button.data('vardesc');
         var modal = $(this);
         $('#modal-frame-title').text(frameTitle);
         $('#modal-variant-title').text(variantTitle);
         $('#modal-variant-image').attr("src", imagePath);
+        $('#modal-frame-description').text(frameDesc);
+        $('#modal-variant-description').text(varDesc);
     });
 });
 

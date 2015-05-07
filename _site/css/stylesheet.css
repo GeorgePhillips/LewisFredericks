@@ -12,6 +12,9 @@ body {
   padding-bottom: 25px;
   margin: 0 2.5%; }
 
+h4 {
+  font-weight: lighter; }
+
 .btn-primary {
   color: #fefefe;
   background-color: #454545;
