@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'national-regular';
+  src: url("fonts/national-regular.eot");
+  src: url("fonts/national-regular.eot") format("embedded-opentype"), url("fonts/national-regular.woff") format("woff"), url("fonts/national-regular.ttf") format("truetype"), url("fonts/national-regular.svg#NationalRegular") format("svg"); }
+html, body, h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'national-regular', sans-serif; }
+
 body {
   background-color: #e8e8e8; }
 
@@ -13,7 +20,7 @@ body {
   margin: 0 2.5%; }
 
 h4 {
-  font-weight: lighter; }
+  font-weight: 400; }
 
 .btn-primary {
   color: #fefefe;
@@ -88,10 +95,26 @@ h4 {
   margin-bottom: 0px; }
 
 .modal-body {
-  padding-top: 0px; }
+  padding-top: 0px;
+  text-align: justify; }
 
 .modal-body img {
   max-width: 100%; }
+
+.modal-details {
+  text-align: left;
+  border-left: 1px solid #454545; }
+
+.modal-details h6 {
+  margin-top: 5px; }
+
+.modal-details p {
+  font-size: 12px;
+  line-height: 1;
+  margin-bottom: 5px; }
+
+.dimensions {
+  text-align: center; }
 
 .close span {
   color: #454545; }
