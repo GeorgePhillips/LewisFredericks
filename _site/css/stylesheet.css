@@ -48,9 +48,40 @@ h4 {
   margin-right: 2.5%;
   border-bottom: 2px solid #454545; }
 
+.navbar-nav > li:hover {
+  background-color: #fefefe; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #454545;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover {
+  color: #454545;
+  background-color: #fefefe; }
+
+.navbar-brand {
+  padding: 10px 15px; }
+
+.navbar-brand img {
+  max-height: 100%; }
+
 .nav-padding {
   height: 50px; }
 
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    font-size: 15px; }
+
+  .navbar-right .dropdown-menu {
+    border: 2px solid #454545;
+    border-top: 0px;
+    right: auto;
+    left: 0px; }
+
+  .navbar-right .dropdown-menu li a {
+    padding-top: 10px;
+    padding-bottom: 10px; } }
 .frames-podium-container {
   padding-left: 0;
   padding-right: 0; }

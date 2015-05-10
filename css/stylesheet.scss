@@ -82,8 +82,50 @@ h4 {
     border-bottom: 2px solid $dark-grey;
 }
 
+.navbar-nav > li:hover {
+    background-color: $off-white;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: $dark-grey;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover {
+    color: $dark-grey;
+    background-color: $off-white;
+}
+
+.navbar-brand {
+    padding: 10px 15px;
+}
+
+.navbar-brand img {
+    max-height: 100%;
+}
+
 .nav-padding {
     height: 50px;
+}
+
+@media (min-width: 768px) {
+
+    .navbar-nav > li > a {
+        font-size: 15px;
+    }
+
+    .navbar-right .dropdown-menu {
+        border: 2px solid $dark-grey;
+        border-top: 0px;
+        right: auto;
+        left: 0px;
+    }
+
+    .navbar-right .dropdown-menu li a{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
 
 // FRAMES PODIUM
@@ -188,12 +230,12 @@ h4 {
 }
 
 @media (max-width: 991px) {
-    
+
     .hardware {
         text-align: right;
         border-left: 0px;
     }
-    
+
     .dimensions {
         text-align: center;
         padding-top: 15px;
@@ -202,8 +244,8 @@ h4 {
 }
 
 @media (min-width: 992px) {
-    
+
     .modal-body img {
-    margin-top: -50px;
-}
+        margin-top: -50px;
+    }
 }

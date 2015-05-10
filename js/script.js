@@ -1,7 +1,8 @@
 $(document).ready(function() {  
     // Color nav
     colorNavigation();
-
+    
+    // DETAILS MODAL
     $('#details-modal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget); // Button that triggered the modal
         var frameTitle = button.data('title');
@@ -35,7 +36,7 @@ $(window).scroll(function() {
 
 
 function colorNavigation() {
-    var windowTop = $(window).scrollTop() + 52; // 50 is nav height + border
+    var windowTop = $(window).scrollTop() + $('#main-navigation').height();
     if (isOnOffWhite(windowTop)) {
         $('#main-navigation').css('background-color','#fefefe');
     } else {
