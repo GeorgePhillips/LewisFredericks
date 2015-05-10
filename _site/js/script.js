@@ -6,15 +6,23 @@ $(document).ready(function() {
         var button = $(event.relatedTarget); // Button that triggered the modal
         var frameTitle = button.data('title');
         var variantTitle = button.data('variant');
+        var lensDetails = button.data('lensdetails');
         var imagePath = button.data('imgpath');
         var frameDesc = button.data('description');
         var varDesc = button.data('vardesc');
+        var width = button.data('width');
+        var height = button.data('height');
+        var netWeight = button.data('netweight');
+        var grossWeight = button.data('grossweight');
         var modal = $(this);
         $('#modal-frame-title').text(frameTitle);
         $('#modal-variant-title').text(variantTitle);
+        $('#modal-lens-details').text(lensDetails);
         $('#modal-variant-image').attr("src", imagePath);
         $('#modal-frame-description').text(frameDesc);
         $('#modal-variant-description').text(varDesc);
+        $('#modal-frame-dimensions').text("Width: " + width + " | Height: " + height + " | At widest / highest point");
+        $('#modal-frame-weight').text("Weight: " + netWeight + " (net) | " + grossWeight + " (gross)");
     });
 });
 

@@ -86,7 +86,9 @@ h4 {
   text-align: center; }
 
 .modal-header {
-  padding-bottom: 0px; }
+  padding-bottom: 0px;
+  position: relative;
+  z-index: 5; }
 
 .modal-header h2 {
   margin-top: 10px; }
@@ -96,14 +98,20 @@ h4 {
 
 .modal-body {
   padding-top: 0px;
-  text-align: justify; }
+  text-align: justify;
+  text-align-last: center; }
 
 .modal-body img {
   max-width: 100%; }
 
 .modal-details {
-  text-align: left;
+  text-align: left; }
+
+.dimensions, .hardware {
   border-left: 1px solid #454545; }
+
+.hardware {
+  border-right: 1px solid #454545; }
 
 .modal-details h6 {
   margin-top: 5px; }
@@ -113,8 +121,21 @@ h4 {
   line-height: 1;
   margin-bottom: 5px; }
 
-.dimensions {
+.dimensions-detail {
   text-align: center; }
 
 .close span {
   color: #454545; }
+
+@media (max-width: 991px) {
+  .hardware {
+    text-align: right;
+    border-left: 0px; }
+
+  .dimensions {
+    text-align: center;
+    padding-top: 15px;
+    border-left: 0px; } }
+@media (min-width: 992px) {
+  .modal-body img {
+    margin-top: -50px; } }

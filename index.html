@@ -21,7 +21,7 @@ description: ""
                     <img src="{{ variant.image-path }}" alt="{{ frame.title }} {{ variant.title }}">
                     <h2>{{ frame.title | upcase}}</h2>
                     <h4>{{ variant.title | upcase}} | {{ variant.lens | upcase}}</h4>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#details-modal" data-title="{{ frame.title | upcase }}" data-variant="{{ variant.title | upcase}} | {{ variant.lens | upcase}}" data-description="{{ frame.description }}" data-vardesc="{{ variant.description }}" data-width="{{ frame.width }}" data-height="{{ frame.height }}" data-imgpath="{{ variant.image-path }}">DETAILS</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#details-modal" data-title="{{ frame.title | upcase }}" data-variant="{{ variant.title | upcase}} | {{ variant.lens | upcase}}" data-lensdetails="{{ variant.lens-details }}" data-description="{{ frame.description }}" data-vardesc="{{ variant.description }}" data-width="{{ frame.width }}" data-height="{{ frame.height }}" data-netweight="{{ frame.net-weight }}" data-grossweight="{{ frame.gross-weight }}" data-imgpath="{{ variant.image-path }}">DETAILS</button>
                 </div>
                 {% endfor %}
             </div>
@@ -58,7 +58,7 @@ description: ""
                         <div class="row-wide">
                             <div class="col-xs-6 modal-details hardware">
                                 <h6><b>HARDWARE</b></h6>
-                                <p>Prescription CR39 lenses with AR coating</p>
+                                <p id="modal-lens-details">Lens details</p>
                                 <p>Seven barrel stainless steel hinges</p>
                                 <p>Functional pins and rivets</p>
                             </div>
@@ -68,9 +68,9 @@ description: ""
                                 <p>Lewis Fredericks microfiber cloth</p>
                                 <p>Polishing cream</p>
                             </div>
-                            <div class="col-xs-12 modal-details">
+                            <div class="col-xs-12 modal-details dimensions">
                                 <h6><b>DIMENSIONS</b></h6>
-                                <div class="dimensions">
+                                <div class="dimensions-detail">
                                     <p id="modal-frame-dimensions">Dimensions</p>
                                     <p id="modal-frame-weight">Weight</p>
                                     <br>
