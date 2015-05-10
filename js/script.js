@@ -1,7 +1,7 @@
 $(document).ready(function() {  
     // Color nav
     colorNavigation();
-    
+
     // DETAILS MODAL
     $('#details-modal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget); // Button that triggered the modal
