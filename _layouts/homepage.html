@@ -1,68 +1,95 @@
 <!DOCTYPE html>
-<!--[if lt 9 ]><html class="unsupported" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><html lang="en"><![endif]-->
+<html lang="en">
 
-<head>
-    <meta charset="utf-8"/>
-    <title>{{ page.title }}</title>
-    <meta name="description" content="{{ page.description }}"/>
-    <link rel="canonical" href="{{ page.path }}"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <link rel="shortcut icon" href="./img/favicon.png"/>
+    <head>
+        <!-- SCRIPT TO MAKE SURE YOU HAVE JS AND > IE9 -->
+        <!-- I DREAM OF THE DAY THIS IS NO LONGER NECESSARY -->
+        <script type="text/javascript" charset="utf-8">
+            document.write('<style type="text/css" media="screen">#javascript-disabled { display: none; }</style>');
 
-    <!-- STYLES -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/slick.css">
-    <link rel="stylesheet" href="/css/slick-theme.css">
-    <link rel="stylesheet" href="/css/stylesheet.css">
+            // DETECT IE9 AND LOWER
+            var div = document.createElement("div");
+            div.innerHTML = "<!--[if lte IE 9]><i></i><![endif]-->";
+            var isIeLessThan9 = (div.getElementsByTagName("i").length == 1);
+            if (!isIeLessThan9) {
+                document.write('<style type="text/css" media="screen">#ie8 { display: none; }</style>');
+            }
+        </script>
 
-    <!-- SCRIPTS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="/js/bootstrap-hover-dropdown.min.js"></script>
-    <script src="/js/slick.min.js"></script>
-    <script src="/js/script.js"></script>
-</head>
-<body>
-    <header>
-        <nav id="main-navigation" class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#"><img src="/img/logo.png" alt="Lewis Fredericks Logo"/></a>
-                </div>
+        <!-- BASIC PAGE NEEDS -->
+        <meta charset="utf-8"/>
+        <title>{{ page.title }}</title>
+        <meta name="description" content="{{ page.description }}"/>
+        <link rel="canonical" href="{{ page.path }}"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <link rel="shortcut icon" href="./img/favicon.png"/>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="50" data-close-others="true" role="button" aria-expanded="false">FRAMES</a>
-                            <ul class="dropdown-menu" role="menu">
-                                {% for frame in site.frames %}
-                                    <li><a href="#{{ frame.title | downcase | replace: ' ', '-' | replace: '.', ''}}">{{ frame.title | upcase }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </li>
-                        <li><a href="#">LOOKBOOK</a></li>
-                        <li><a href="#">HORN</a></li>
-                        <li><a href="#">STOCKISTS</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-    </header>
-    <main>
-        {{ content }}
-    </main>
-    <footer>
-        
-    </footer>
-</body>
+        <!-- STYLES -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/slick.css">
+        <link rel="stylesheet" href="/css/slick-theme.css">
+        <link rel="stylesheet" href="/css/stylesheet.css">
+
+        <!-- SCRIPTS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="/js/bootstrap-hover-dropdown.min.js"></script>
+        <script src="/js/slick.min.js"></script>
+        <script src="/js/script.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav id="main-navigation" class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" id="dropdown-button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img src="/img/logo.png" alt="Lewis Fredericks Logo"/></a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li data-toggle="collapse" data-target=".in" class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="50" data-close-others="true" role="button" aria-expanded="false">FRAMES</a>
+                                <ul class="dropdown-menu" role="menu">
+                                    {% for frame in site.frames %}
+                                    <li data-toggle="collapse" data-target=".in"><a href="#{{ frame.title | downcase | replace: ' ', '-' | replace: '.', ''}}">{{ frame.title | upcase }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                            <li data-toggle="collapse" data-target=".in"><a href="#">LOOKBOOK</a></li>
+                            <li data-toggle="collapse" data-target=".in"><a href="#">HORN</a></li>
+                            <li data-toggle="collapse" data-target=".in"><a href="#">STOCKISTS</a></li>
+                            <li data-toggle="collapse" data-target=".in"><a href="#">CONTACT</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </header>
+        <main>
+            {{ content }}
+
+            <div id="javascript-disabled" class="fullscreen-warning">
+                <img src="/img/logo.png" alt="Lewis Fredericks Logo"/>
+                <h4><b>YOUR BROWSER HAS JAVASCRIPT DISABLED</b></h4>
+                <p>Our site cannot be displayed. Please <a href="http://enable-javascript.com/">enable Javascript</a> and refresh the page.</p>
+                <p>Alternatively, if you need to get in touch, please <a href="mailto:info@lewisfredericks.co.nz">send us an email</a> with your enquiry.</p>
+            </div>
+            <div id="ie8" class="fullscreen-warning">
+                <img src="/img/logo.png" alt="Lewis Fredericks Logo"/>
+                <h4><b>YOUR BROWSER IS UNSUPPORTED</b></h4>
+                <p>Our site cannot be displayed. Please <a href="http://browsehappy.com/?locale=en">upgrade to a modern browser</a> and reload the page.</p>
+                <p>Alternatively, if you need to get in touch, please <a href="mailto:info@lewisfredericks.co.nz">send us an email</a> with your enquiry.</p>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
 </html>

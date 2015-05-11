@@ -56,7 +56,7 @@ h4 {
     top: 0px;
     left: 0px;
     background-color: $light-grey;
-    z-index: 10000;
+    z-index: 1000;
     text-align: center;
     padding: 20px;
 }
@@ -67,6 +67,10 @@ h4 {
     padding-top: 10%;
     padding-top: 35vh;
     padding-bottom: 20px;
+}
+
+#javascript-disabled {
+    z-index: 1200;
 }
 
 // BUTTONS
