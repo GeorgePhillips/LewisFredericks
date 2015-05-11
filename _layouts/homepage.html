@@ -28,6 +28,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/slick.css">
         <link rel="stylesheet" href="/css/slick-theme.css">
+        <link rel="stylesheet" href="/css/input-fields.css">
         <link rel="stylesheet" href="/css/stylesheet.css">
 
         <!-- SCRIPTS -->
@@ -35,6 +36,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <script src="/js/bootstrap-hover-dropdown.min.js"></script>
         <script src="/js/slick.min.js"></script>
+        <script src="/js/classie.js"></script>
         <script src="/js/script.js"></script>
     </head>
     <body>
@@ -91,5 +93,37 @@
         <footer>
 
         </footer>
+        <!-- GET THE INPUT FIELDS WORKING -->
+        <script>
+            (function() {
+                // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+                if (!String.prototype.trim) {
+                    (function() {
+                        // Make sure we trim BOM and NBSP
+                        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                        String.prototype.trim = function() {
+                            return this.replace(rtrim, '');
+                        };
+                    })();
+                }
+                [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+                    // in case the input is already filled..
+                    if( inputEl.value.trim() !== '' ) {
+                        classie.add( inputEl.parentNode, 'input--filled' );
+                    }
+                    // events:
+                    inputEl.addEventListener( 'focus', onInputFocus );
+                    inputEl.addEventListener( 'blur', onInputBlur );
+                } );
+                function onInputFocus( ev ) {
+                    classie.add( ev.target.parentNode, 'input--filled' );
+                }
+                function onInputBlur( ev ) {
+                    if( ev.target.value.trim() === '' ) {
+                        classie.remove( ev.target.parentNode, 'input--filled' );
+                    }
+                }
+            })();
+        </script>
     </body>
 </html>

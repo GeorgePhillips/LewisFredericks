@@ -256,6 +256,53 @@ h4 {
     color: $dark-grey;
 }
 
+.buying-options {
+    border: 2px solid $dark-grey;
+    background-color: $off-white;
+    margin: 20px 0px;
+    padding: 0px 0px;
+}
+
+.buying-options .form-inline {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.input {
+    width: auto;
+}
+
+.input--madoka {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+.graphic--madoka {
+    stroke-width: 8px;
+    stroke: $dark-grey;
+}
+
+.input__label--madoka, .input__field--madoka {
+    color: $dark-grey;
+}
+
+.input__field--madoka {
+    height: 36px;
+}
+
+.input__field--madoka:focus + .input__label--madoka .input__label-content--madoka, .input--filled .input__label-content--madoka {
+    -webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0, 2.5em, 0);
+    transform: scale3d(0.81, 0.81, 1) translate3d(0, 2.5em, 0);
+}
+
+.form-control:focus {
+    border-color: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
 @media (max-width: 991px) {
 
     .hardware {
