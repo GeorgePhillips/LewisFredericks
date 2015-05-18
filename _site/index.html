@@ -34,6 +34,7 @@
         <!-- SCRIPTS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
         <script src="/js/bootstrap-hover-dropdown.min.js"></script>
         <script src="/js/slick.min.js"></script>
         <script src="/js/classie.js"></script>
@@ -196,7 +197,7 @@
 <!--/FRAMES PODIUMS -->
 
 <!-- STOCKISTS -->
-
+<div class="container-fluid"
 <!--/STOCKISTS -->
 
 <!-- DETAILS MODAL -->
@@ -254,17 +255,21 @@
                                 </p>
                             </div>
                             <div class="col-md-6 col-xs-12">
-                                <form class="form-inline" method="post" action="#">
+                                <form id="modal-enquiry-form" class="form-inline" method="post" action="#">
                                     <span class="input input--madoka">
-                                        <input type="email" class="form-control input__field input__field--madoka" id="email-input">
+                                        <input required name="email" type="email" class="form-control input__field input__field--madoka" id="email-input">
                                         <label class="input__label input__label--madoka" for="email-input">
                                             <svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
                                                 <path d="m0,0l404,0l0,77l-404,0l0,-77z"></path>
                                             </svg>
                                             <span class="input__label-content input__label-content--madoka">Email</span></label>
                                     </span>
+                                    <input type="hidden" name="cc_emails[]" value="info@lewisfredericks.co.nz" />
                                     <button type="submit" class="btn btn-primary">Enquire</button>
                                 </form>
+                                <script>
+                                    $('#modal-enquiry-form').validate();
+                                </script>
                             </div>
                         </div>
                     </div>
