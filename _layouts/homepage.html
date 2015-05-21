@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
     <head>
-        <!-- SCRIPT TO MAKE SURE YOU HAVE JS AND > IE9 -->
-        <!-- I DREAM OF THE DAY THIS IS NO LONGER NECESSARY -->
-        <script type="text/javascript" charset="utf-8">
-        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-            document.write('<style type="text/css" media="screen">#javascript-disabled { display: none; }</style>');
-
-            // DETECT IE9 AND LOWER
-            var div = document.createElement("div");
-            div.innerHTML = "<!--[if lte IE 9]><i></i><![endif]-->";
-            var isIeLessThan9 = (div.getElementsByTagName("i").length == 1);
-            if (!isIeLessThan9) {
-                document.write('<style type="text/css" media="screen">#ie8 { display: none; }</style>');
-            }
-        </script>
-
         <!-- BASIC PAGE NEEDS -->
         <meta charset="utf-8"/>
         <title>{{ page.title }}</title>
@@ -31,6 +16,9 @@
         <link rel="stylesheet" href="/css/slick-theme.css">
         <link rel="stylesheet" href="/css/input-fields.css">
         <link rel="stylesheet" href="/css/stylesheet.css">
+        <!--[if lte IE 9]>
+            <style type="text/css" media="screen">#ie8 { display: none; }</style>
+        <![endif]-->
 
         <!-- SCRIPTS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -40,6 +28,9 @@
         <script src="/js/slick.min.js"></script>
         <script src="/js/classie.js"></script>
         <script src="/js/script.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+        </script>
     </head>
     <body>
         <header>
